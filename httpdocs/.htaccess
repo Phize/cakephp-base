@@ -1,0 +1,18 @@
+# 開発環境
+#AuthUserFile /var/www/vhosts/dev.example.com/httpdocs/.htpasswd
+#AuthGroupFile /dev/null
+#AuthName "Please enter your ID and password"
+#AuthType Basic
+#require valid-user
+#order deny,allow
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+	# テストスーツ
+    RewriteCond %{HTTP_HOST} ^example\.com$ [NC]
+    RewriteRule ^test\.php$ index.php?url=pages/error404 [NC,L]
+</IfModule>
