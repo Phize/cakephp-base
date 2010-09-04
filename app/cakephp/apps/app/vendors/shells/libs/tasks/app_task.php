@@ -29,16 +29,9 @@ class AppTask extends Shell {
 	}
 
 	/**
-	 * 終了処理
-	 */
-	public function shutdown() {}
-
-	/**
 	 * ヘルプ
 	 */
-	public function help() {
-		$this->shutdown();
-	}
+	public function help() {}
 
 	/**
 	 * メイン処理
