@@ -32,7 +32,7 @@ class AppShell extends Shell {
 	 * 初期処理
 	 */
 	public function startup() {
-		$this->config = Configure::read('APP');
+		$this->config = Configure::read('App');
 	}
 
 	/**
