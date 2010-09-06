@@ -6,6 +6,13 @@
  */
 class AppShell extends Shell {
 	/**
+	 * モデル
+	 *
+	 * @var array
+	 */
+	public $uses = array();
+
+	/**
 	 * タスク
 	 *
 	 * @var array
